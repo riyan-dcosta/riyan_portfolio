@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:riyan_portfolio/features/home/controller/theme_changer.dart';
 import 'package:riyan_portfolio/features/home/presentation/home_page.dart';
 import 'package:riyan_portfolio/theme/text_theme.dart';
 import 'package:riyan_portfolio/theme/theme.dart';
+
+import 'features/home/presentation/controller/theme_changer.dart';
 
 void main() {
   runApp(const MainApp());
