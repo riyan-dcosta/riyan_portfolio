@@ -9,5 +9,33 @@
     "frameworksBackend": {
       "region": "asia-east1"
     }
+  },
+  "emulators": {
+    "firestore": {
+      "port": 8080
+    },
+    "hosting": {
+      "port": 5000
+    },
+    "ui": {
+      "enabled": true
+    },
+    "singleProjectMode": true
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "flutter": {
+    "platforms": {
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "riyan-portfolio",
+          "configurations": {
+            "web": "1:1076268489285:web:52f61ebeaa0155058c612c"
+          }
+        }
+      }
+    }
   }
 }
