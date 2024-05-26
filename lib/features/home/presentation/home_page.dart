@@ -21,14 +21,17 @@ class _HomePageState extends State<HomePage>
   @override
   void initState() {
     super.initState();
-    tabController = TabController(length: TabViews.pages.length, vsync: this);
+    tabController = TabController(
+      length: TabViews.pages.length,
+      vsync: this,
+      initialIndex: 0,
+    );
     themeChanger = widget.themeChanger;
   }
 
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      initialIndex: 1,
       length: TabViews.pages.length,
       child: Scaffold(
         body: CustomScrollView(
