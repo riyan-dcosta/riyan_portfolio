@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:riyan_portfolio/features/dashboard/presentation/view/dashboard_page.dart';
 import 'package:riyan_portfolio/features/home/presentation/controller/home_tab_controller.dart';
 import 'package:riyan_portfolio/features/todo/presentation/todo_page.dart';
 
@@ -72,7 +73,7 @@ class _HomePageState extends State<HomePage>
             ),
             SliverFillRemaining(
               child: TabBarView(controller: tabController, children: [
-                Placeholder(),
+                DashboardPage(),
                 TodoPage(),
               ]),
             ),
