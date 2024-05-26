@@ -28,6 +28,7 @@ class _HomePageState extends State<HomePage>
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
+      initialIndex: 1,
       length: TabViews.pages.length,
       child: Scaffold(
         body: CustomScrollView(
