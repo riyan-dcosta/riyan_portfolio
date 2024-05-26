@@ -13,8 +13,8 @@ class TodoPage extends StatefulWidget {
 
 class _TodoPageState extends State<TodoPage> {
   TodoMutableList todoMutableList = TodoMutableList(
-      getAllTodos:
-          GetAllTodos(todoRepository: TodoRepositoryImpl(todoApi: TodoApiFirebaseImpl())));
+      getAllTodos: GetAllTodos(
+          todoRepository: TodoRepositoryImpl(todoApi: TodoApiFirebaseImpl())));
 
   @override
   void initState() {
@@ -37,7 +37,7 @@ class _TodoPageState extends State<TodoPage> {
               onPressed: () {
                 initializeTodos();
               },
-              child: Icon(Icons.refresh)),
+              child: const Icon(Icons.refresh)),
         ),
         ListenableBuilder(
           listenable: todoMutableList,
