@@ -19,7 +19,7 @@ class _TodoPageState extends State<TodoPage> {
   @override
   void initState() {
     super.initState();
-    // initializeTodos();
+    initializeTodos();
   }
 
   initializeTodos() {
@@ -29,13 +29,16 @@ class _TodoPageState extends State<TodoPage> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        ElevatedButton(
-            onPressed: () {
-              print("load todos");
-              initializeTodos();
-            },
-            child: Text("load Todoas")),
+        Align(
+          alignment: Alignment.centerRight,
+          child: ElevatedButton(
+              onPressed: () {
+                initializeTodos();
+              },
+              child: Icon(Icons.refresh)),
+        ),
         ListenableBuilder(
           listenable: todoMutableList,
           builder: (context, child) {
@@ -47,7 +50,7 @@ class _TodoPageState extends State<TodoPage> {
                           Checkbox(
                               value: e.isCompleted,
                               onChanged: (_) {
-                                todoMutableList.updateTodo(id: e.id);
+                                // todoMutableList.updateTodo(id: e.id);
                               }),
                           Text(e.title),
                         ],

@@ -12,12 +12,12 @@ class TodoMutableList extends ChangeNotifier {
   TodoMutableList({required GetAllTodos getAllTodos})
       : _getAllTodos = getAllTodos;
 
-  final List<TodoList> _todos = [];
+  List<TodoList> _todos = [];
 
   UnmodifiableListView<TodoList> get getTodos => UnmodifiableListView(_todos);
 
-  loadList() async{
-    final todos = await _getAllTodos();
+  loadList() async {
+    _todos = await _getAllTodos();
     // final todosLength = TodoStatics.todos.length;
     // for (int i = 0; i < todosLength; i++) {
     //   _todos.add(
