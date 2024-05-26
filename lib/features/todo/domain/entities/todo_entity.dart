@@ -1,9 +1,22 @@
 class TodoList {
-  int id;
+  String id;
   bool isCompleted;
   String title;
 
   TodoList({required this.id, required this.isCompleted, required this.title});
+
+  factory TodoList.fromJson(Map<String, dynamic> json) {
+    return TodoList(
+      id: json["id"],
+      isCompleted: json["isCompleted"] ?? false,
+      title: json["title"] ?? "N/A",
+    );
+  }
+
+  @override
+  String toString() {
+    return "id : $id, titile : $title, isCompleted : $isCompleted";
+  }
 
   TodoList copyWith({
     bool? isCompleted,
@@ -14,12 +27,6 @@ class TodoList {
       title: title ?? this.title,
       id: id,
     );
-  }
-}
-
-class UniqueID {
-  static int uuid() {
-    return DateTime.now().millisecondsSinceEpoch;
   }
 }
 
