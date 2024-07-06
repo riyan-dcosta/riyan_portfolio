@@ -19,18 +19,5 @@ class AppTextTheme {
     headlineLarge: _basicTextStyle,
     headlineMedium: _basicTextStyle,
     headlineSmall: _basicTextStyle,
-    // headline1: _basicTextStyle,
-    // button: _basicTextStyle,
-    // bodyText1: _basicTextStyle,
-    // bodyText2: _basicTextStyle,
-    // caption: _basicTextStyle,
-    // headline2: _basicTextStyle,
-    // headline3: _basicTextStyle,
-    // headline4: _basicTextStyle,
-    // headline5: _basicTextStyle,
-    // headline6: _basicTextStyle,
-    // overline: _basicTextStyle,
-    // subtitle1: _basicTextStyle,
-    // subtitle2: _basicTextStyle,
   );
 }

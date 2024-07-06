@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:riyan_portfolio/features/home/presentation/home_page.dart';
+import 'package:riyan_portfolio/theme/app_theme.dart';
 import 'package:riyan_portfolio/theme/text_theme.dart';
 import 'package:riyan_portfolio/theme/theme.dart';
 
@@ -43,6 +44,7 @@ class _MainAppState extends State<MainApp> {
       listenable: themeChanger,
       builder: (context, _) {
         final currentTheme = themeChanger.getCurrentTheme;
+        // final currentTheme = ThemeMode.light;
         return MaterialApp(
             themeAnimationStyle: AnimationStyle(
               curve: CatmullRomCurve(
@@ -58,6 +60,7 @@ class _MainAppState extends State<MainApp> {
               ),
               duration: const Duration(seconds: 1),
             ),
+            // theme: AppTheme().light(),
             theme: const MaterialTheme(AppTextTheme.textTheme).light(),
             darkTheme: const MaterialTheme(AppTextTheme.textTheme).dark(),
             themeMode: currentTheme,

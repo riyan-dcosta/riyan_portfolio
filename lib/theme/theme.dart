@@ -2,10 +2,76 @@ import "package:flutter/material.dart";
 
 class MaterialTheme {
   final TextTheme textTheme;
-
+  // final FloatingActionButtonThemeData floatingActionButtonThemeData;
   const MaterialTheme(this.textTheme);
-
+  // const MaterialTheme(this.textTheme, this.floatingActionButtonThemeData);
   static MaterialScheme lightScheme() {
+    return const MaterialScheme(
+      brightness: Brightness.light,
+      primary: Color(0xff08677f),
+      surfaceTint: Color(0xff08677f),
+      onPrimary: Color(0xffffffff),
+      primaryContainer: Color(0xffff0000),
+      // primaryContainer: Color(0xffb8eaff),
+      onPrimaryContainer: Color(0xff00ff00),
+      // onPrimaryContainer: Color(0xff001f28),
+      secondary: Color(0xff4c626b),
+      onSecondary: Color(0xffffffff),
+      secondaryContainer: Color(0xffcfe6f1),
+      onSecondaryContainer: Color(0xff0000ff),
+      // onSecondaryContainer: Color(0xff071e26),
+      tertiary: Color(0xff5a5b7e),
+      onTertiary: Color(0xffffffff),
+      tertiaryContainer: Color(0xffe1e0ff),
+      onTertiaryContainer: Color(0xffff00ff),
+      // onTertiaryContainer: Color(0xff171837),
+      error: Color(0xffba1a1a),
+      onError: Color(0xffffffff),
+      errorContainer: Color(0xffffdad6),
+      onErrorContainer: Color(0xff410002),
+      background: Color(0xfff5fafd),
+      onBackground: Color(0xffffff00),
+      // onBackground: Color(0xff171c1f),
+      surface: Color(0xfff5fafd),
+      // onSurface: Color(0xffAAFFFF),
+      onSurface: Color(0xff171c1f),
+      surfaceVariant: Color(0xffdce4e8),
+      onSurfaceVariant: Color(0xff40484c),
+      outline: Color(0xff70787c),
+      outlineVariant: Color(0xffbfc8cc),
+      shadow: Color(0xff77FF77),
+      // shadow: Color(0xff000000),
+      scrim: Color(0xff77FF77),
+      // scrim: Color(0xff000000),
+      inverseSurface: Color(0xff2c3134),
+      inverseOnSurface: Color(0xffedf1f4),
+      inversePrimary: Color(0xff88d1ec),
+      primaryFixed: Color(0xffb8eaff),
+      onPrimaryFixed: Color(0xffAAFFFF),
+      // onPrimaryFixed: Color(0xff001f28),
+      primaryFixedDim: Color(0xff88d1ec),
+      onPrimaryFixedVariant: Color(0xff004d61),
+      secondaryFixed: Color(0xffcfe6f1),
+      onSecondaryFixed: Color(0xff77FF77),
+      // onSecondaryFixed: Color(0xff071e26),
+      secondaryFixedDim: Color(0xffb3cad5),
+      onSecondaryFixedVariant: Color(0xff344a52),
+      tertiaryFixed: Color(0xffe1e0ff),
+      onTertiaryFixed: Color(0xff77FF77),
+      // onTertiaryFixed: Color(0xff171837),
+      tertiaryFixedDim: Color(0xffc3c3eb),
+      onTertiaryFixedVariant: Color(0xff434465),
+      surfaceDim: Color(0xffd6dbde),
+      surfaceBright: Color(0xfff5fafd),
+      surfaceContainerLowest: Color(0xffffffff),
+      surfaceContainerLow: Color(0xfff0f4f7),
+      surfaceContainer: Color(0xffeaeef2),
+      surfaceContainerHigh: Color(0xffe4e9ec),
+      surfaceContainerHighest: Color(0xffdee3e6),
+    );
+  }
+
+  static MaterialScheme lightScheme2() {
     return const MaterialScheme(
       brightness: Brightness.light,
       primary: Color(0xff08677f),
@@ -131,7 +197,7 @@ class MaterialTheme {
           bodyColor: colorScheme.onSurface,
           displayColor: colorScheme.onSurface,
         ),
-        scaffoldBackgroundColor: colorScheme.background,
+        scaffoldBackgroundColor: colorScheme.surface,
         canvasColor: colorScheme.surface,
       );
 
