@@ -11,6 +11,9 @@ dependencies:
   firebase_core: ^2.31.1
   flutter:
     sdk: flutter
+  shelf: ^1.4.1
+  shelf_router: ^1.1.4
+  shelf_static: ^1.1.2
 
 dev_dependencies:
   flutter_test:
@@ -28,5 +31,8 @@ flutter:
           weight: 500
         - asset: assets/fonts/Inter/Inter-Bold.ttf
           weight: 600
+    - family: ds_var
+      fonts:
+        - asset: assets/fonts/dm_sans/dm_sans_variable.ttf
 
 
