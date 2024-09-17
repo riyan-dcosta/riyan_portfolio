@@ -23,6 +23,7 @@ Future<void> main() async {
       .add(_router.call);
 
   // See https://pub.dev/documentation/shelf/latest/shelf_io/serve.html
+  // ignore: unused_local_variable
   final server = await shelf_io.serve(
     // See https://pub.dev/documentation/shelf/latest/shelf/logRequests.html
     logRequests()
@@ -32,7 +33,7 @@ Future<void> main() async {
     port,
   );
 
-  print('Serving at http://${server.address.host}:${server.port}');
+  // print('Serving at http://${server.address.host}:${server.port}');
 
   // Used for tracking uptime of the demo server.
   _watch.start();
